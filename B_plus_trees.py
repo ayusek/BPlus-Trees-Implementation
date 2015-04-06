@@ -481,7 +481,6 @@ def search_all_in_file_right(end_node , lower_limit ,upper_limit):
 	old_line = 0
 	for i in range(5, len(lines)):
 		if switch : 
-			print (float(lines[i]),upper_limit,lower_limit)
 			if (float(lines[i]) <= upper_limit and float(lines[i]) >= lower_limit):
 				data_list.append(linecache.getline('tree/data' , int(old_line)))
 			switch = False
@@ -514,15 +513,15 @@ def query0(key , value):
 	if (Insert(key + '\t' + value + '\n')):
 		time_taken = str(time.clock() - start_time)
 		
-		output_file.write("Insertion Done in "+ time_taken  +" seconds with "+str(Disc_Accesses) + " Disc Accesses")
+		output_file.write("Insertion Done in "+ time_taken  +" seconds with "+str(Disc_Accesses) + " Disc Accesses\n")
 	else:
-		output_file.write("Insertion Unsuccessful")
+		output_file.write("Insertion Unsuccessful\n")
 
 	global query0_list_time
 	global query0_list_disc
 
-	query0_list_disc.append(Disc_Accesses)
-	query0_list_time.append(time_taken)
+	query0_list_disc.append(float(Disc_Accesses))
+	query0_list_time.append(float(time_taken))
 
 	return True
 
@@ -539,13 +538,13 @@ def query1(key):
 	#Write data list in file and then record stats
 	time_taken = str(time.clock() - start_time)
 		
-	output_file.write(str(data_list) + " found in "+ time_taken  +" seconds with "+str(Disc_Accesses) + " Disc Accesses")
+	output_file.write(str(data_list) + " found in "+ time_taken  +" seconds with "+str(Disc_Accesses) + " Disc Accesses\n")
 
 	global query1_list_time
 	global query1_list_disc
 
-	query1_list_disc.append(Disc_Accesses)
-	query1_list_time.append(time_taken)
+	query1_list_disc.append(float(Disc_Accesses))
+	query1_list_time.append(float(time_taken))
 
 	return True
 
@@ -567,13 +566,13 @@ def query2(center , range):
 	#Write data list in file and then record stats
 	time_taken = str(time.clock() - start_time)
 		
-	output_file.write(str(data_list) + " found in the given range in "+ time_taken  + " seconds with "+str(Disc_Accesses) + " Disc Accesses")
+	output_file.write(str(data_list) + " found in the given range in "+ time_taken  + " seconds with "+str(Disc_Accesses) + " Disc Accesses\n")
 
 	global query2_list_time
 	global query2_list_disc
 
-	query2_list_disc.append(Disc_Accesses)
-	query2_list_time.append(time_taken)
+	query2_list_disc.append(float(Disc_Accesses))
+	query2_list_time.append(float(time_taken))
 
 	return True
 
@@ -591,7 +590,7 @@ def query(file):
 			elif(words[0] == '2'):
 				query2(words[1], words[2])
 			else:
-				print line
+				print "ERROR",line
 		return True
 
 
