@@ -64,8 +64,11 @@ Average Time= 0.000425452
 Standard Deviation in Time from Average= 0.000174742873091
 
 Minimum Disc Accesses= 21.0
+
 Maximim Disc Accesses= 216.0
+
 Average Disc Accesses= 112.26
+
 Standard Deviation in Disc Accesses from Average= 38.7302775616
 
 From the above statistics we can conclude that the average number of Disc Accesses is same for all the three operations. But single search takes less time that Insertion. This is expected as reading is faster than writing. 
