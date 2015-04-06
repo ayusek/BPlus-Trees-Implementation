@@ -1,6 +1,6 @@
 # BPlus-Trees-Implementation
 
-This is a simulation of BPlus Trees using files, done as a part of the course assignment for CS315A at IIT Kanpur. I have implemented a B-Plus Tree which supports the following 
+This is a simulation of BPlus Trees using files, done as a part of the course assignment for **CS315A(Principles of Data Base Systems) at IIT Kanpur**. I have implemented a B-Plus Tree which supports the following 
 
 1. Search
 2. Range Search
